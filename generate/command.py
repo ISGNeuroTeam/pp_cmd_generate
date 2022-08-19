@@ -6,7 +6,11 @@ from pp_exec_env.base_command import BaseCommand, Syntax
 
 
 class GenerateCommand(BaseCommand):
-    # define syntax of your command here
+    """
+    Generate signal
+
+    | generate name="new_signal_name", type="sinusoidal", frequency=3, amplitude=1, offset=0, fs=100, duration=10
+    """
     syntax = Syntax(
         [
             Positional("name", required=True, otl_type=OTLType.TEXT),

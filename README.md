@@ -1,8 +1,10 @@
 # pp_cmd_generate
 Postprocessing command "generate"
 
+Generates signal 
+
 Usage example:
-`... | generate`
+`... | generate name="new_signal_name", type="sinusoidal", frequency=3, amplitude=1, offset=0, fs=100, duration=10`
 
 ## Getting started
 ###  Prerequisites
@@ -26,5 +28,5 @@ Use `pp` to test generate command:
 pp
 Storage directory is /tmp/pp_cmd_test/storage
 Commmands directory is /tmp/pp_cmd_test/pp_cmd
-query: | otl_v1 <# makeresults count=100 #> |  generate 
+query: | generate name="new_signal_name", type="sinusoidal", frequency=3, amplitude=1, offset=0, fs=100, duration=10 
 ```
